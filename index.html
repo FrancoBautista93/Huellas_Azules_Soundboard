@@ -12,28 +12,24 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh;
             margin: 0;
+            padding: 20px;
             background-color: #f0f0f0;
-            overflow: hidden;
         }
         .soundboard-container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
-            height: 80vh; /* Limits the height of the soundboard */
-            overflow-y: auto; /* Allows vertical scrolling */
-            padding: 10px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
         }
         .soundboard {
             display: grid;
-            grid-template-columns: repeat(6, minmax(100px, 1fr));
+            grid-template-columns: repeat(6, 1fr); /* 6 columns per row */
+            grid-template-rows: repeat(4, 1fr) auto; /* 4 rows of 6 cards, and 1 row for the remaining cards */
             gap: 10px;
         }
+        .soundboard > .card:nth-last-child(-n+4) {
+            grid-column: span 3; /* Make the last row with 4 cards */
+        }
         .card {
-            width: 100%;
             padding-top: 150%; /* Aspect ratio of 2:3 (width:height) */
             background-size: cover;
             background-position: center;
@@ -50,7 +46,7 @@
     </style>
 </head>
 <body>
-
+    
     <h1>Cartas de Exploración</h1>
     <div class="soundboard-container">
         <div class="soundboard">
