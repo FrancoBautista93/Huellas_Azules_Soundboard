@@ -23,7 +23,7 @@
         .soundboard {
             display: grid;
             grid-template-columns: repeat(6, 1fr); /* 6 columns per row */
-             grid-auto-rows: 1fr;
+            grid-template-rows: repeat(4, 1fr);
             gap: 10px;
         }
         .soundboard > .card:nth-last-child(-n+4) {
