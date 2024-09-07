@@ -47,34 +47,34 @@
     <h1>Cartas de Exploración</h1>
     <div class="soundboard-container">
         <div class="soundboard">
-             <div class="card" data-sound="audio/card_1.wav">Carta 1</div>
-             <div class="card" data-sound="audio/card_2.wav">Carta 2</div>
-             <div class="card" data-sound="audio/card_3.wav">Carta 3</div>
-             <div class="card" data-sound="audio/card_4.wav">Carta 4</div>
-             <div class="card" data-sound="audio/card_5.wav">Carta 5</div>
-             <div class="card" data-sound="audio/card_6.wav">Carta 6</div>
-             <div class="card" data-sound="audio/card_7.wav">Carta 7</div>
-             <div class="card" data-sound="audio/card_8.wav">Carta 8</div>
-             <div class="card" data-sound="audio/card_9.wav">Carta 9</div>
-             <div class="card" data-sound="audio/card_10.wav">Carta 10</div>
-             <div class="card" data-sound="audio/card_11.wav">Carta 11</div>
-             <div class="card" data-sound="audio/card_12.wav">Carta 12</div>
-             <div class="card" data-sound="audio/card_13.wav">Carta 13</div>
-             <div class="card" data-sound="audio/card_14.wav">Carta 14</div>
-             <div class="card" data-sound="audio/card_15.wav">Carta 15</div>
-             <div class="card" data-sound="audio/card_16.wav">Carta 16</div>
-             <div class="card" data-sound="audio/card_17.wav">Carta 17</div>
-             <div class="card" data-sound="audio/card_18.wav">Carta 18</div>
-             <div class="card" data-sound="audio/card_19.wav">Carta 19</div>
-             <div class="card" data-sound="audio/card_20.wav">Carta 20</div>
-             <div class="card" data-sound="audio/card_21.wav">Carta 21</div>
-             <div class="card" data-sound="audio/card_22.wav">Carta 22</div>
-             <div class="card" data-sound="audio/card_23.wav">Carta 23</div>
-             <div class="card" data-sound="audio/card_24.wav">Carta 24</div>
-             <div class="card" data-sound="audio/card_25.wav">Carta 25</div>
-             <div class="card" data-sound="audio/card_26.wav">Carta 26</div>
-             <div class="card" data-sound="audio/card_27.wav">Carta 27</div>
-             <div class="card" data-sound="audio/card_28.wav">Carta 28</div>
+             <div class="card" data-sound="card_1">Carta 1</div>
+             <div class="card" data-sound="card_2">Carta 2</div>
+             <div class="card" data-sound="card_3">Carta 3</div>
+             <div class="card" data-sound="card_4">Carta 4</div>
+             <div class="card" data-sound="card_5">Carta 5</div>
+             <div class="card" data-sound="card_6">Carta 6</div>
+             <div class="card" data-sound="card_7">Carta 7</div>
+             <div class="card" data-sound="card_8">Carta 8</div>
+             <div class="card" data-sound="card_9">Carta 9</div>
+             <div class="card" data-sound="card_10">Carta 10</div>
+             <div class="card" data-sound="card_11">Carta 11</div>
+             <div class="card" data-sound="card_12">Carta 12</div>
+             <div class="card" data-sound="card_13.wav">Carta 13</div>
+             <div class="card" data-sound="card_14.wav">Carta 14</div>
+             <div class="card" data-sound="card_15.wav">Carta 15</div>
+             <div class="card" data-sound="card_16.wav">Carta 16</div>
+             <div class="card" data-sound="card_17.wav">Carta 17</div>
+             <div class="card" data-sound="card_18.wav">Carta 18</div>
+             <div class="card" data-sound="card_19.wav">Carta 19</div>
+             <div class="card" data-sound="card_20.wav">Carta 20</div>
+             <div class="card" data-sound="card_21.wav">Carta 21</div>
+             <div class="card" data-sound="card_22.wav">Carta 22</div>
+             <div class="card" data-sound="card_23.wav">Carta 23</div>
+             <div class="card" data-sound="card_24.wav">Carta 24</div>
+             <div class="card" data-sound="card_25.wav">Carta 25</div>
+             <div class="card" data-sound="card_26.wav">Carta 26</div>
+             <div class="card" data-sound="card_27.wav">Carta 27</div>
+             <div class="card" data-sound="card_28.wav">Carta 28</div>
         </div>
     </div>
 
@@ -85,7 +85,7 @@
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const soundName = card.getAttribute('data-sound');
-                const audio = new Audio(`audio/${soundName}`);
+                const audio = new Audio(`audio/${soundName}.wav`);
                 audio.play();
             });
         });
