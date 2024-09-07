@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Soundboard</title>
+    <style>
+        /* CSS to style the soundboard */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .soundboard {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .card {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cartas de Exploración - Soundboard</h1>
+    <div class="soundboard">
+        <div class="card" data-sound="kushe_papai">KUSHE PAPAI</div>
+        <div class="card" data-sound="nqgro">NQGRO</div>
+        <div class="card" data-sound="kallfõ_malen">KALLFÕ MALEN</div>
+        <div class="card" data-sound="marke">MARKE</div>
+        <div class="card" data-sound="zomo_ñal_lonko">ZOMO ÑAL LONKO</div>
+        <div class="card" data-sound="foie">FOIE</div>
+        <div class="card" data-sound="pangi">PANGI</div>
+        <div class="card" data-sound="kollon">KOLLON</div>
+        <div class="card" data-sound="llampidõcken">LLAMPIDÕCKEN</div>
+        <div class="card" data-sound="maxi">MAXI</div>
+        <div class="card" data-sound="txekõl">TXEKÕL</div>
+        <div class="card" data-sound="antû_mediodia">ANTÛ MEDIODIA</div>
+        <div class="card" data-sound="antû_anochecer">ANTÛ ANOCHECER</div>
+        <div class="card" data-sound="mawûn">MAWÛN</div>
+        <div class="card" data-sound="lai_antû">LAI ANTÛ</div>
+        <div class="card" data-sound="pewma">PEWMA</div>
+        <div class="card" data-sound="wanglen">WANGLEN</div>
+        <div class="card" data-sound="pillan_nanweza">PILLAN NANWEZA</div>
+        <div class="card" data-sound="apoy_koyen">APOY KOYEN</div>
+        <div class="card" data-sound="fota_leufû">FOTA LEUFÛ</div>
+        <div class="card" data-sound="karûn">KARÛN</div>
+        <div class="card" data-sound="fûta_mangil">FÛTA MANGIL</div>
+        <div class="card" data-sound="nqbley_pemawtun">NQBLEY PEMAWTUN</div>
+        <div class="card" data-sound="welen">WELEN</div>
+    </div>
+
+    <script>
+        // JavaScript to play sounds when a card is clicked
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const soundName = card.getAttribute('data-sound');
+                const audio = new Audio(`sounds/${soundName}.wav`);
+                audio.play();
+            });
+        });
+    </script>
+
+</body>
+</html>
