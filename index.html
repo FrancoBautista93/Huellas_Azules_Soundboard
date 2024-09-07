@@ -22,8 +22,8 @@
         }
         .soundboard {
             display: grid;
-            grid-template-columns: repeat(6, 1fr); /* 6 columns per row */
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(6, 1fr) auto; /* 6 columns per row */
+            grid-template-rows: repeat(4, 1fr) auto;
             gap: 10px;
         }
         .soundboard > .card:nth-last-child(-n+4) {
