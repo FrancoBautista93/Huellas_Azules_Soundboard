@@ -69,8 +69,7 @@
         <div class="card" data-sound="audio/card_26.wav">Carta 26</div>
         <div class="card" data-sound="audio/card_27.wav">Carta 27</div>
         <div class="card" data-sound="audio/card_28.wav">Carta 28</div>
-        <div class="card" data-sound="audio/card_29.wav">Carta 29</div>
-        <div class="card" data-sound="audio/card_30.wav">Carta 30</div>
+
     </div>
 
     <script>
@@ -80,7 +79,7 @@
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const soundName = card.getAttribute('data-sound');
-                const audio = new Audio(`sounds/${soundName}.wav`);
+                const audio = new Audio(`audio/${soundName}.wav`);
                 audio.play();
             });
         });
